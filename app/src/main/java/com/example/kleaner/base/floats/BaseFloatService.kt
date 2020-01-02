@@ -209,38 +209,36 @@ abstract class BaseFloatService<DB : ViewDataBinding, M : BaseFloatModel> : Serv
      * 设置触发悬浮窗移动的View
      */
     fun triggerMove(view: View) {
-        view.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-                when (event?.action) {
-                    MotionEvent.ACTION_DOWN -> {
-                        startX = event.x
-                        startY = event.y
-                        view.isActivated = true
-                        isClick = true
-                    }
-                    MotionEvent.ACTION_MOVE -> {
-                        if (Math.abs(startX - event.x) >= mTouchSlop
-                            || Math.abs(startY - event.y) >= mTouchSlop
-                        ) {
-                            isClick = false
-                        }
-                        params.x = (event.rawX.toInt() - startX).toInt()
-                        params.y = (event.rawY.toInt() - startY).toInt()
-                        if (params.y <= statusBarHeight) {
-                            params.y = statusBarHeight
-                        }
-                        update()
-                    }
-                    MotionEvent.ACTION_UP -> {
-                        if (isClick) {
-                            view.performClick()
-                        }
-                        view.isActivated = false
-                    }
+        view.setOnTouchListener { v, event ->
+            when (event?.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    startX = event.x
+                    startY = event.y
+                    view.isActivated = true
+                    isClick = true
                 }
-                return true
+                MotionEvent.ACTION_MOVE -> {
+                    if (Math.abs(startX - event.x) >= mTouchSlop
+                        || Math.abs(startY - event.y) >= mTouchSlop
+                    ) {
+                        isClick = false
+                    }
+                    params.x = (event.rawX.toInt() - startX).toInt()
+                    params.y = (event.rawY.toInt() - startY).toInt()
+                    if (params.y <= statusBarHeight) {
+                        params.y = statusBarHeight
+                    }
+                    update()
+                }
+                MotionEvent.ACTION_UP -> {
+                    if (isClick) {
+                        view.performClick()
+                    }
+                    view.isActivated = false
+                }
             }
-        })
+            true
+        }
     }
 
     /**
