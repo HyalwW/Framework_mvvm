@@ -1,12 +1,12 @@
-package com.example.kleaner.utils.aspect.permission.aspect
+package com.example.aspect.permission.aspect
 
 import android.content.Context
 import android.util.Log
-import com.example.kleaner.utils.Utils
-import com.example.kleaner.utils.aspect.permission.IPermissionCallback
-import com.example.kleaner.utils.aspect.permission.annotataions.PermissionDenied
-import com.example.kleaner.utils.aspect.permission.annotataions.Permissions
-import com.example.kleaner.utils.aspect.permission.utils.PermissionUtil
+import com.example.utils.Utils
+import com.example.aspect.permission.IPermissionCallback
+import com.example.aspect.permission.annotations.PermissionDenied
+import com.example.aspect.permission.annotations.Permissions
+import com.example.aspect.permission.utils.PermissionUtil
 import org.aspectj.lang.ProceedingJoinPoint
 import org.aspectj.lang.annotation.Around
 import org.aspectj.lang.annotation.Aspect
@@ -14,7 +14,7 @@ import org.aspectj.lang.annotation.Pointcut
 
 @Aspect
 class PermissionAspect {
-    @Pointcut("execution(@com.example.kleaner.utils.aspect.permission.annotataions.Permissions * *(..))")
+    @Pointcut("execution(@com.example.aspect.permission.annotations.Permissions * *(..))")
     fun pointcut() {
     }
 

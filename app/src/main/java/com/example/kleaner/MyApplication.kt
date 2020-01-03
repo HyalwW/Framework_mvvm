@@ -4,7 +4,7 @@ import android.app.Application
 import android.util.Log
 import com.example.kleaner.data.database.AppDatabase
 import com.example.kleaner.data.models.Bean
-import com.example.kleaner.utils.Utils
+import com.example.utils.Utils
 
 class MyApplication : Application() {
     override fun onCreate() {

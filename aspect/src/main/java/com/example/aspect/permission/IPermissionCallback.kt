@@ -1,4 +1,4 @@
-package com.example.kleaner.utils.aspect.permission
+package com.example.aspect.permission
 
 interface IPermissionCallback {
     /**

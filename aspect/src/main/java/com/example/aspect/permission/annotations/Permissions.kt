@@ -1,4 +1,4 @@
-package com.example.kleaner.utils.aspect.permission.annotataions
+package com.example.aspect.permission.annotations
 
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY_GETTER, AnnotationTarget.PROPERTY_SETTER)
 @Retention(AnnotationRetention.RUNTIME)

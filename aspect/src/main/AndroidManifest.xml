@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.aspect">
+    <application>
+        <activity android:name="com.example.aspect.permission.aspect.PermissionActivity"
+                  android:theme="@style/translucent"/>
+    </application>
+</manifest>

@@ -1,4 +1,4 @@
-package com.example.kleaner.utils.aspect.permission.utils
+package com.example.aspect.permission.utils
 
 import android.app.Activity
 import android.content.Context
@@ -33,7 +33,13 @@ class PermissionUtil {
          */
         fun hasSelfPermissions(context: Context, vararg permissions: String): Boolean {
             for (permission in permissions) {
-                if (permissionExists(permission) && !hasSelfPermission(context, permission)) {
+                if (permissionExists(
+                        permission
+                    ) && !hasSelfPermission(
+                        context,
+                        permission
+                    )
+                ) {
                     return false
                 }
             }

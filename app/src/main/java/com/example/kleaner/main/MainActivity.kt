@@ -9,8 +9,8 @@ import com.example.kleaner.base.BaseActivity
 import com.example.kleaner.data.database.AppDatabase
 import com.example.kleaner.data.models.Bean
 import com.example.kleaner.databinding.ActivityMainBinding
-import com.example.kleaner.utils.aspect.permission.annotataions.PermissionDenied
-import com.example.kleaner.utils.aspect.permission.annotataions.Permissions
+import com.example.aspect.permission.annotations.PermissionDenied
+import com.example.aspect.permission.annotations.Permissions
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 

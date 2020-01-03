@@ -1,4 +1,4 @@
-package com.example.kleaner.utils.aspect.permission.aspect
+package com.example.aspect.permission.aspect
 
 import android.app.Activity
 import android.content.Context
@@ -6,8 +6,8 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kleaner.utils.aspect.permission.IPermissionCallback
-import com.example.kleaner.utils.aspect.permission.utils.PermissionUtil
+import com.example.aspect.permission.IPermissionCallback
+import com.example.aspect.permission.utils.PermissionUtil
 
 class PermissionActivity : AppCompatActivity() {
 
