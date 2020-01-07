@@ -1,1 +1,1 @@
-include ':app', ':aspect', ':utils'
+include ':app', ':aspect', ':utils', ':net'
